@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 for a in range(97, 123):
-    if chr(a) == "q" or "e":
+    if chr(a) == "q" or chr(a) == "e":
     continue
-else:
+    else:
     print("{}".format("".join(chr(a)), end="")
