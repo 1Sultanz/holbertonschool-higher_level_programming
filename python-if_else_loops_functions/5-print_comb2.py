@@ -5,4 +5,4 @@ while i <= 99:
         print("{:02}".format(i), end=", ")
     else:
         print("{:02}".format(i))
-    i += 1        
+    i += 1
