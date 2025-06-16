@@ -1,4 +1,6 @@
-#!/usr/bin/python
-def add(a, b):
-    print("{a} + {b} = {a + b}".format(a, b))
-print(add(1, 2)
+#!/usr/bin/python3
+from add_0 import add
+
+a = 1
+b = 2
+print("{} + {} = {}".format(a, b, add(a, b)))
