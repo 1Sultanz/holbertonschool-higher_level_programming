@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import hidden_4
+
+if __name__ == "__main__":
+    hidden_files = dir(hidden_4)
+    for i in hidden_files:
+        if not i.startswith("__"):
+            print(i)
