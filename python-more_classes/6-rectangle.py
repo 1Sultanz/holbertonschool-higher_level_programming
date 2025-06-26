@@ -54,8 +54,7 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.number_of_intances -= 1
-        print(f"{Rectangle.number_of_instances} instances of Rectangle")
+        Rectangle.number_of_instances -= 1
 
 
 if __name__ == "__main__":
