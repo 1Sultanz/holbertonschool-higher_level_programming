@@ -10,3 +10,52 @@ Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 >>> g.integer_validator("age")
 Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> g.integer_validator("age", 0)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+>>> g.integer_validator("age", (4,))
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> g.integer_validator("age", [3])
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> g.integer_validator("age", True)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> g.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+>>> g.integer_validator("age", None)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+>>> class Rectangle(BaseGeometry):
+...     def __init__(self, width, height):
+...         self.width = width
+...         self.height = height
+...
+...     def area(self):
+...         return self.width * self.height
+...
+>>> r = Rectangle(3, 4)
+>>> r.area()
+12
+
+>>> r.integer_validator("width", 3)
+>>> r.integer_validator("height", 4)
+>>> r.integer_validator("width", -3)
+Traceback (most recent call last):
+    ...
+ValueError: width must be greater than 0
+>>> r.integer_validator("height", "4")
+Traceback (most recent call last):
+    ...
+TypeError: height must be an integer
