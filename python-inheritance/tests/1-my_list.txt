@@ -1,24 +1,3 @@
-MyList class
-==============
-
-This file contains doctests for the MyList class.
-
-The tests demonstrate how to use the MyList class to create and manipulate lists of integers, and how to use the 'print_sorted' method to print the sorted list to the console.
-
-Usage:
----------
-    To run the tests, execute the following command:
-
-    If you are in Ubuntu:
-    $ python3 -m doctest -v 1-my_list.txt
-
-    Otherwise:
-    $ python -m doctest -v 1-my_list.txt
-    
-
-Tests:
----------
-
 >>> MyList = __import__("1-my_list").MyList
 >>> l = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
 >>> l.print_sorted()
