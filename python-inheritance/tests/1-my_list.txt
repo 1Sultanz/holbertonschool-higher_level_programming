@@ -1,0 +1,47 @@
+MyList class
+==============
+
+This file contains doctests for the MyList class.
+
+The tests demonstrate how to use the MyList class to create and manipulate lists of integers, and how to use the 'print_sorted' method to print the sorted list to the console.
+
+Usage:
+---------
+    To run the tests, execute the following command:
+
+    If you are in Ubuntu:
+    $ python3 -m doctest -v 1-my_list.txt
+
+    Otherwise:
+    $ python -m doctest -v 1-my_list.txt
+    
+
+Tests:
+---------
+
+>>> MyList = __import__("1-my_list").MyList
+>>> l = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+>>> l.print_sorted()
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+>>> l.append(7)
+>>> l.print_sorted()
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 9]
+>>> l.extend([8, 0, 2])
+>>> l.print_sorted()
+[0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9]
+>>> l.pop()
+2
+>>> l.print_sorted()
+[0, 1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9]
+>>> l.remove(2)
+>>> l.print_sorted()
+[0, 1, 1, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9]
+>>> l.__str__ # doctest: +ELLIPSIS
+<method-wrapper '__str__' of MyList object at 0x...>
+>>> l.append(-1)
+>>> l.append(-10)
+>>> l.print_sorted()
+[-10, -1, 0, 1, 1, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9]
+>>> l.clear()
+>>> l.print_sorted()
+[]
