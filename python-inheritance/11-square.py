@@ -11,7 +11,6 @@ class Square(Rectangle):
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
-        # Call the parent Rectangle constructor with width and height equal to size
         super().__init__(size, size)
 
     def area(self):
