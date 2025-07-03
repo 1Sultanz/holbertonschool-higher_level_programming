@@ -31,3 +31,4 @@ class CustomObject:
             return dictionary
         except Exception as e:
             print(f"Desrialization Error: {e}")
+            return None
