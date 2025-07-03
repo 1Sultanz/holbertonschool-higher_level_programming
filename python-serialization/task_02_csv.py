@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-python import csv import json
+import csv 
+import json
 
 
 def convert_csv_to_json(filename):
