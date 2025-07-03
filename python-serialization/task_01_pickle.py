@@ -27,8 +27,8 @@ class CustomObject:
     def deserialize(cls, filename):
         try:
             with open(filename, "rb") as f:
-                dictioanary = pickle.load(f)
-            return dictionary
+                obj = pickle.load(f)
+            return obj
         except Exception as e:
             print(f"Desrialization Error: {e}")
             return None
