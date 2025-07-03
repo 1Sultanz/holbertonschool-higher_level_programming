@@ -1,4 +1,4 @@
 -- COUNT 89
-SELECT COUNT(*) AS count
-FROM firat_table
+SELECT COUNT(*)
+FROM first_table
 WHERE id=89;
