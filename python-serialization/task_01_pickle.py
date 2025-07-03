@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import pickle
 
+
 class CustomObject:
     """This class is about custom"""
 
@@ -23,10 +24,10 @@ class CustomObject:
             print(f"Serialization Error: {e}")
 
     @classmethod
-    def  deserialize(cls, filename):
+    def deserialize(cls, filename):
         try:
             with open(filename, "rb") as f:
                 dictioanary = pickle.load(f)
             return dictionary
         except Exception as e:
-            print(f"Desrialization Error: {e}")`
+            print(f"Desrialization Error: {e}")
