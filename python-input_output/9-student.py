@@ -13,6 +13,5 @@ class Student:
         self.age = age
  
     """Module documented"""
-    @publicmethod
     def to_json(self):
         return self.__dict__
