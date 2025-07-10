@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Load, add, save"""
-
-if __name__ == "__main__":
-    import sys
-    from save_to_json_file import save_to_json_file
-    from load_from_json_file import load_from_json_file
-
-    filename = "add_item.json"
+"""Save, add, load"""
+import json
 
 
-    try:
-        items = load_from_json_file(filename)
-    except FileNotFoundError:
-        items = []
+def save_to_json_file(my_obj, filename):
+    """This function that writes an Object to a text file"""
+    with open(filename, "w", encoding='utf-8') as f:
+        a = json.dump(my_obj, f)
+        return a
 
-    items.extend(sys.argv[1:])
+def load_from_json_file(filename):
+    """A function that creates an Object from a json file"""
+    with open(filename, "r", encoding='utf-8') as f:
+        return json.load(f)
 
-    save_to_json_file(items, filename)
+my_list = [1, 2, 3, 4]
+save_to_json_file(my_list, "add_item.json")
+load_from_json_file("add_item.json")
