@@ -15,6 +15,6 @@ class Student:
     """Module documented"""
     def to_json(self, attrs=None):
         if type(attrs) is list and all(type(attr) is str for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs hasattr(self, attr)
+            return {attr: getattr(self, attr) for attr in attrs hasattr(self, attr)}
         return self.__dict__
 
