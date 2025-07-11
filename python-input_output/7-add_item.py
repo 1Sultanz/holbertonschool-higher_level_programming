@@ -13,7 +13,7 @@ filename = "add_item.json"
 
 
 try:
-    items = load_fro_json_file(filename)
+    items = load_from_json_file(filename)
 except FileNotFoundError:
     items = []
 
