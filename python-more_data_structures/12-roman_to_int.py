@@ -11,6 +11,8 @@ def roman_to_int(roman_string):
     }
 
     total = 0
+    if type(roman_string) is not str:
+        return None
     for index, char in enumerate(roman_string):
         if index == len(roman_string) - 1:
             total += roman[char]
