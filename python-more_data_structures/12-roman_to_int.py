@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
             total += roman[char]
         elif roman[char] < roman[roman_string[index+1]]:
             total = total + (roman[roman_string[index+1]] - roman[char])
-            break
+            pass
         else:
             total += roman[char]
     return total
