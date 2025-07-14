@@ -19,5 +19,3 @@ def roman_to_int(roman_string):
         else:
             total += roman[char]
     return total
-
-print(roman_to_int("XIX"))
